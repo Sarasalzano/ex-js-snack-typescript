@@ -5,7 +5,7 @@
 // Se è un booleano: stampa “Sì” o “No” in base al suo valore
 // In tutti gli altri casi: stampa “Tipo non supportato”
 
-let valore: unknown = "Ciao"
+let valore: unknown = "Ciao";
 if (typeof valore === "string") {
   console.log(valore.toUpperCase());
 } else if (typeof valore === "number") {
@@ -15,3 +15,19 @@ if (typeof valore === "string") {
 } else {
   console.log("Tipo non supportato");
 }
+
+// Snack 2
+// Crea un type alias Dipendente che rappresenta un lavoratore con i seguenti dati:
+// nome → stringa
+// cognome → stringa
+// annoNascita → numero
+// sesso → Può essere solo "m" o "f".
+// anniDiServizio (array di numeri, es. [2014, 2015, 2017, 2018])
+
+type Dipendente = {
+  nome: string;
+  cognome: string;
+  annoNascita: number;
+  sesso: "m" | "f";
+  anniDiServizio: number[];
+};
