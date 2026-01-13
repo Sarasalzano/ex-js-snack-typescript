@@ -5,3 +5,13 @@
 // Se è un booleano: stampa “Sì” o “No” in base al suo valore
 // In tutti gli altri casi: stampa “Tipo non supportato”
 
+let valore: unknown = "Ciao"
+if (typeof valore === "string") {
+  console.log(valore.toUpperCase());
+} else if (typeof valore === "number") {
+  console.log(valore * 2);
+} else if (typeof valore === "boolean") {
+  console.log(valore ? "Sì" : "No");
+} else {
+  console.log("Tipo non supportato");
+}
